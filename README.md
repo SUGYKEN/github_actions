@@ -19,3 +19,10 @@ gem install bundler
 bundle install
 bundle info XXXX --> DLしたライブラリのバージョン確認
 ```
+
+
+## UnitTestの導入
+- XXXXTest.swiftという形でUnitTestのファイルを追加する
+- @testableでモジュールインポートを忘れずに！！
+- testYYYYと「test」でメソッドを始めること
+- command shift U でテストを実行する
