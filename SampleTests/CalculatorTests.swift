@@ -35,24 +35,33 @@ class CalculatorTests: XCTestCase {
     
     // ===================↑デフォルト=======================
     func testAdd() { // testをメソッド名につけること(ここはAndroidも同じだった記憶)
-        let calc = Calculator()
         let result = calc.add(1, 2)
         XCTAssertEqual(result, 3)
     }
     
     func testSubstract() {
-        let calc = Calculator()
         XCTAssertEqual(calc.subtract(6,3), 3)
     }
     
     func testMultiple() {
-        let calc = Calculator()
         XCTAssertEqual(calc.multiple(6,3), 18)
     }
 
     func testDivision() {
-        let calc = Calculator()
         XCTAssertEqual(calc.division(6,3), 2)
     }
 
+    // ===================↑テストメソッド=======================
+    var calc: Calculator!
+    
+    override func setUp() { // 初期化処理
+        super.setUp()
+        self.calc = Calculator()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    // ===================↑ライフサイクル=======================
 }
