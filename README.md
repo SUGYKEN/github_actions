@@ -49,3 +49,7 @@ func testAssertEmpty() {
   seertEmpty(string)
 }
 ```
+
+### テスト結果の抽出
+- XCode11以前はxccovを使って.xccovreportの中身を確認していたようです
+- XCode11以降はxccresultというファイルの中身を確認します。[参考1](https://swet.dena.com/entry/2019/10/23/080000)[参考2](https://engineering.mercari.com/blog/entry/20201218-61f7110851/)
