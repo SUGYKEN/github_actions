@@ -57,3 +57,12 @@ func testAssertEmpty() {
 ```
 $ xcrun xccov view --report ResultBundle.xcresult
 ```
+
+### slatherを導入する
+
+```
+gem install slather
+bundle install
+```
+
+- XCode13ではSlatherがうまく動かない・・・泣
