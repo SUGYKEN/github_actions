@@ -76,5 +76,61 @@ class AssertionTests: XCTestCase {
         }
     }
     
+    // オブジェクト 階層
+    func testEqualObjectNested() {
+        
+        XCTContext.runActivity(named: "ぽちとジョン") { _ in
+            XCTContext.runActivity(named: "ぽちとジョン") {_ in
+                let dog1 = Dog(name: "ぽち", age: 2)
+                let dog2 = Dog(name: "ジョン", age: 2)
+                XCTAssertNotEqual(dog1, dog2)
+            }
+            XCTContext.runActivity(named: "ジョンとジョン") {_ in
+                let dog1 = Dog(name: "ジョン", age: 2)
+                let dog2 = Dog(name: "ジョン", age: 2)
+                XCTAssertEqual(dog1, dog2)
+            }
+        }
+        
+        XCTContext.runActivity(named: "ぽちとジョンと年齢") { _ in
+            let dog1 = Dog(name: "ジョン", age: 3)
+            let dog2 = Dog(name: "ジョン", age: 2)
+            XCTAssertNotEqual(dog1, dog2)
+        }
+        // 独自の型（構造体）ではEquatlbeプロトコルに準拠していないとNG！
+    }
+
+    
+    // 新しく追加されたUnwrap！！
+    func testExampleUnwrap() {
+        
+        let string: String? = "Hello"
+        
+        // `nil`でないことを検証＋アンラップ
+        guard let s = string else { XCTAssertNotNil(string); return }
+        
+        // 検証
+        XCTAssertEqual(s, "Hello")
+    }
+    
+    func testExampleUnwrap2() throws { // `throws`キーワードが必要な点に注意
+        
+        let string: String? = "Hello"
+        
+        // `nil`でないことを検証＋アンラップ
+        let s = try XCTUnwrap(string)
+        
+        // 検証
+        XCTAssertEqual(s, "Hello")
+        
+        /*
+         なお、guard letではなく強制アンラップ（!）を利用すれば、 XCTUnwrap()を利用せずともシンプルに書けるのではないか、 と感じた方もいるかもしれません。
+
+         強制アンラップは記述こそ簡単ですが、 アンラップの失敗によりテストケースが失敗した場合、 「どの箇所で失敗したのか」という情報が失われ原因調査にコストがかかるという欠点があります。
+
+         なので、オプショナル型の中身を取り出して検証したい場合は、 今回追加されたXCTUnwrap()を利用していくとよいでしょう。
+         
+         */
+    }
     
 }
