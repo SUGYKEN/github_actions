@@ -16,6 +16,10 @@
 		96483812272D7CE4004467B6 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96483811272D7CE4004467B6 /* SampleTests.swift */; };
 		9648381C272D7CE4004467B6 /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648381B272D7CE4004467B6 /* SampleUITests.swift */; };
 		9648381E272D7CE4004467B6 /* SampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648381D272D7CE4004467B6 /* SampleUITestsLaunchTests.swift */; };
+		9648382D272D82EC004467B6 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648382C272D82EC004467B6 /* Calculator.swift */; };
+		9648382E272D82EC004467B6 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648382C272D82EC004467B6 /* Calculator.swift */; };
+		9648382F272D82EC004467B6 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648382C272D82EC004467B6 /* Calculator.swift */; };
+		96483831272D846B004467B6 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96483830272D846B004467B6 /* CalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		96483817272D7CE4004467B6 /* SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9648381B272D7CE4004467B6 /* SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITests.swift; sourceTree = "<group>"; };
 		9648381D272D7CE4004467B6 /* SampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9648382C272D82EC004467B6 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		96483830272D846B004467B6 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		964837F9272D7CDE004467B6 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				9648382A272D8294004467B6 /* Model */,
 				964837FA272D7CDE004467B6 /* AppDelegate.swift */,
 				964837FC272D7CDE004467B6 /* SceneDelegate.swift */,
 				964837FE272D7CDE004467B6 /* ViewController.swift */,
@@ -114,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				96483811272D7CE4004467B6 /* SampleTests.swift */,
+				96483830272D846B004467B6 /* CalculatorTests.swift */,
 			);
 			path = SampleTests;
 			sourceTree = "<group>";
@@ -125,6 +133,22 @@
 				9648381D272D7CE4004467B6 /* SampleUITestsLaunchTests.swift */,
 			);
 			path = SampleUITests;
+			sourceTree = "<group>";
+		};
+		9648382A272D8294004467B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9648382B272D82B7004467B6 /* Calculator */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9648382B272D82B7004467B6 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				9648382C272D82EC004467B6 /* Calculator.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				964837FF272D7CDE004467B6 /* ViewController.swift in Sources */,
+				9648382D272D82EC004467B6 /* Calculator.swift in Sources */,
 				964837FB272D7CDE004467B6 /* AppDelegate.swift in Sources */,
 				964837FD272D7CDE004467B6 /* SceneDelegate.swift in Sources */,
 			);
@@ -269,6 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96483812272D7CE4004467B6 /* SampleTests.swift in Sources */,
+				96483831272D846B004467B6 /* CalculatorTests.swift in Sources */,
+				9648382E272D82EC004467B6 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +305,7 @@
 			files = (
 				9648381E272D7CE4004467B6 /* SampleUITestsLaunchTests.swift in Sources */,
 				9648381C272D7CE4004467B6 /* SampleUITests.swift in Sources */,
+				9648382F272D82EC004467B6 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
