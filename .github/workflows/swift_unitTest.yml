@@ -50,8 +50,9 @@ jobs:
 #            clean test | xcpretty
 
     # Pre Start Simulator
+    # xcrun simctl create <name> <device type id> <runtime id>
     - name: pre-start simulator
-      run: open -a Simulator --args -CurrentDeviceUDID FD33A4A9-1950-4476-AB58-C69D8A095905
+      run: xcrun simctl create iPhone12_ProMax com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max FD33A4A9-1950-4476-AB58-C69D8A095905
 
     # Run build
     - name: Build
@@ -66,5 +67,5 @@ jobs:
       run: xcodebuild
             -scheme Sample
             -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
+            -destination 'platform=iOS Simulator,name=iPhone12_ProMax'
             clean test
