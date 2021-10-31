@@ -51,25 +51,25 @@ jobs:
 
     # Pre Start Simulator
     # xcrun simctl create <name> <device type id> <runtime id>
-    - name: create simulator
-      run: xcrun simctl create "iPhone12_ProMax" "com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max" "com.apple.CoreSimulator.SimRuntime.iOS-14-4"
+    #- name: create simulator
+    #  run: xcrun simctl create "iPhone12_ProMax" "com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max" "com.apple.CoreSimulator.SimRuntime.iOS-14-4"
 
     # xcrun simctl boot 
     - name: boot simulator
-      run: xcrun simctl boot "9B025AF4-1A5B-4864-90C2-E976AD514CAB"
+      run: xcrun simctl boot "FD33A4A9-1950-4476-AB58-C69D8A095905"
 
     # Run build
-    - name: Build
-      run: xcodebuild
-            -sdk iphonesimulator
-            -configuration Debug
-            -scheme Sample
-            build
+    #- name: Build
+    #  run: xcodebuild
+    #        -sdk iphonesimulator
+    #        -configuration Debug
+    #        -scheme Sample
+    #        build
             
     # Run unit test
     - name: Run tests
       run: xcodebuild
             -scheme Sample
             -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,OS=14.4,name=iPhone12_ProMax'
+            -destination 'platform=iOS Simulator,OS=14.4,name=iPhone 12 Pro Max'
             clean test
