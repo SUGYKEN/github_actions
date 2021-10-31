@@ -26,5 +26,5 @@ jobs:
             -scheme SampleTest
             -sdk iphonesimulator
             -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
-            -resultBundlePath ./
-            clean test
+            -resultBundlePath ./../
+            clean test | xcpretty
