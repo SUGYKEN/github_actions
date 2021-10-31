@@ -66,3 +66,8 @@ bundle install
 ```
 
 - XCode13ではSlatherがうまく動かない・・・泣
+
+
+## GithubAction workflow
+### mac-os
+- latestだと最新にならない可能性あり（最新でないと利用できるXCodeのバージョンに差分が出るので注意）
