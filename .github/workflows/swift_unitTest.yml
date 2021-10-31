@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: macos-latest
-
+    name: Build
     steps:
     - uses: actions/checkout@v2
     - name: Select Xcode version # Xcode 12.4 を使う
@@ -21,10 +21,15 @@ jobs:
             -configuration Debug
             build
       # Run unit test
+  
+  unit_test:
+    runs-on: macos-latest
+    name: Unit test
+    steps:
     - name: Run tests
       run: xcodebuild
             -scheme Sample
             -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
+            -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.3'
             -resultBundlePath TestResultsB
             clean test | xcpretty
