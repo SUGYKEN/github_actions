@@ -1,0 +1,65 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "こんにちわ" # レーンの概要を説明する
+  lane :hello do # レーンを定義 lnae:<name> do ~ endまでがひとつのlane
+    puts("Hello, fastlane!") # putsアクションの呼び出し
+  end
+end
+
+#
+# fastlaneのレーンはprivatemの方が良さそう。他からコマンドライン上で呼び出されてしまう..
+#
+
+#
+# entry
+#
+lane :entry do
+  hoge
+end
+
+private_lane :hoge do
+  puts("Private Lane")
+end
+
+#
+# lifecycle
+#
+before_all do |lane, options|
+  puts("before all (lane: #{lane})")
+end
+
+before_each do |lane, options|
+  puts("before each (lane: #{lane})")
+end
+
+# エラー時は呼ばれない
+after_all do |lane, options|
+  puts("after all (lane: #{lane})")
+end
+
+after_each do |lane, options|
+  puts("after each (lane: #{lane})")
+end
+
+error do |lane, exception, options|
+  puts("Error ! (lane: #{lane}, exception: #{exception})")
+end
+
+
+

@@ -1,0 +1,20 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "単体テストの実行" # レーンの概要を説明する
+  lane :unittest do # レーンを定義 lnae:<name> do ~ endまでがひとつのlane
+    # アクションの呼び出し
+    run_tests(
+      project: "Sample.xcodeproj",
+      scheme: "Sample",
+      configuration: "Debug",
+      clean: true,
+      devices: ["iphone X"],
+      open_report: true,
+      output_directory: "test",
+      output_types: "html,junit",
+      skip_testing: "SampleUITests"
+    )
+  end
+end
+
