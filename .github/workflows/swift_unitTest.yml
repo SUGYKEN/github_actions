@@ -40,14 +40,14 @@ jobs:
     - name: Check Available destination
       run: xcodebuild build -scheme Sample -showdestinations
     
-    - name: Unite Tests
-      run: set -o pipefail && xcodebuild
-            -scheme Sample
-            -sdk iphonesimulator
-            -destination "platform=iOS Simulator,OS=14.4,name=iPhone 11 Pro Max"
-            -resultBundlePath TestResultsB
-            -skip-testing SampleUITests
-            clean test | xcpretty
+#    - name: Unite Tests
+#      run: set -o pipefail && xcodebuild
+#            -scheme Sample
+#            -sdk iphonesimulator
+#            -destination "platform=iOS Simulator,OS=14.4,name=iPhone 11 Pro Max"
+#            -resultBundlePath TestResultsB
+#            -skip-testing SampleUITests
+#            clean test | xcpretty
     # Run build
     - name: Build
       run: xcodebuild
