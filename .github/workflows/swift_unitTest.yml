@@ -32,9 +32,10 @@ jobs:
     - name: Simulator Lists
       run: xcrun simctl list
     - name: Unite Tests
-      run: xcodebuild
+      run: set -o pipefail && xcodebuild
             -scheme Sample
             -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest4'
+            -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest'
             -resultBundlePath TestResultsB
+            -skip-testing SampleUITest
             clean test | xcpretty
