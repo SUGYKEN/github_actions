@@ -66,8 +66,12 @@ jobs:
     #        -scheme Sample
     #        build
             
-    # Run unit test
-    - name: Run tests
+    # Run unit test fastlane
+    - name: Run tests(fastlane)
+      run: fastlane unittest
+            
+    # Run unit test xcodebuild
+    - name: Run tests(xcodebuild)
       run: xcodebuild
             -scheme Sample
             -sdk iphonesimulator
