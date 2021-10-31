@@ -9,7 +9,7 @@
 gem install bundler
 ```
 
-### Gemfileを生成(生成済)
+### Gemfileを生成(リポジトリには生成済)
 ```
 gem install bundler
 ```
@@ -19,8 +19,7 @@ gem install bundler
 bundle install
 bundle info XXXX --> DLしたライブラリのバージョン確認
 ```
-
-
+# CI
 ## UnitTestの導入
 - XXXXTest.swiftという形でUnitTestのファイルを追加する
 - @testableでモジュールインポートを忘れずに！！
@@ -71,3 +70,21 @@ bundle install
 ## GithubAction workflow
 ### mac-os
 - latestだと最新にならない可能性あり（最新でないと利用できるXCodeのバージョンに差分が出るので注意）
+
+### シミュレータの起動
+- 現状うまくいかない。-> 一旦後回し中。
+
+## UITestの導入
+-> 一旦後回し中。
+
+# CD
+## fastlaneを導入
+
+```
+xcode-select --install・・・実行してない人のみ（インストール済みの場合はエラー発生するが無視してOK）
+sudo gem install fastlane -NV
+fastlane init ・・・ここで利用目的に応じてfastlaneの設定方法が選べる
+```
+- fastlane/にファイルが作成
+- Appfileは、AppleIDなどを記述するファイル
+- Fastfileは。自動化するタスクを記述するファイル
