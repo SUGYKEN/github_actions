@@ -33,6 +33,5 @@ jobs:
       run: xcodebuild
             -scheme Sample
             -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest'
             -resultBundlePath TestResultsB
             clean test | xcpretty
