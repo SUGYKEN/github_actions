@@ -48,6 +48,11 @@ jobs:
 #            -resultBundlePath TestResultsB
 #            -skip-testing SampleUITests
 #            clean test | xcpretty
+
+    # Pre Start Simulator
+    - name: pre-start simulator
+      run: open -a Simulator --args -CurrentDeviceUDID FD33A4A9-1950-4476-AB58-C69D8A095905
+
     # Run build
     - name: Build
       run: xcodebuild
@@ -55,6 +60,7 @@ jobs:
             -configuration Debug
             -scheme Sample
             build
+            
     # Run unit test
     - name: Run tests
       run: xcodebuild
