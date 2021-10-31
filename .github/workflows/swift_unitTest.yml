@@ -7,19 +7,19 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: macos-latest
-    name: Build
-    steps:
-    - uses: actions/checkout@v2
-    - name: Select Xcode version # Xcode 12.4 を使う
-      run: sudo xcode-select -s '/Applications/Xcode_12.4.app/Contents/Developer'
-    - name: Build
-      run: xcodebuild
-            -scheme Sample
-            -sdk iphonesimulator
-            -configuration Debug
-            build
+#  build:
+#    runs-on: macos-latest
+#    name: Build
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: Select Xcode version # Xcode 12.4 を使う
+#      run: sudo xcode-select -s '/Applications/Xcode_12.4.app/Contents/Developer'
+#    - name: Build
+#      run: xcodebuild
+#            -scheme Sample
+#            -sdk iphonesimulator
+#            -configuration Debug
+#            build
       # Run unit test
   
   unit_test:
@@ -33,6 +33,6 @@ jobs:
       run: xcodebuild
             -scheme Sample
             -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.3'
+            -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.0'
             -resultBundlePath TestResultsB
             clean test | xcpretty
