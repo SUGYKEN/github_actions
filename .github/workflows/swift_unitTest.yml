@@ -23,7 +23,7 @@ jobs:
       # Run unit test
   
   unit_test:
-    runs-on: macos-latest
+    runs-on: macos-11
     name: Unit test
     steps:
     - uses: actions/checkout@v2
