@@ -66,6 +66,10 @@ jobs:
     #        -scheme Sample
     #        build
             
+    # install fastlane
+    - name: install fastlane
+      run: gem install fastlane
+            
     # Run unit test fastlane
     - name: Run tests(fastlane)
       run: fastlane unittest
