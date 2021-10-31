@@ -56,7 +56,7 @@ jobs:
 
     # xcrun simctl boot 
     - name: boot simulator
-      run: xcrun simctl boot "FD33A4A9-1950-4476-AB58-C69D8A095905"
+      run: xcrun simctl boot "9B025AF4-1A5B-4864-90C2-E976AD514CAB"
 
     # Run build
     - name: Build
