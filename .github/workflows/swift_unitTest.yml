@@ -30,8 +30,11 @@ jobs:
     - name: Select Xcode version # Xcode 12.4 を使う
       run: sudo xcode-select -s '/Applications/Xcode_12.4.app/Contents/Developer'
     - name: Run tests
-      run: xcodebuild
-            -scheme Sample
-            -sdk iphonesimulator
-            -resultBundlePath TestResultsB
-            clean test | xcpretty
+      run: xcrun simctl list
+      
+#      xcodebuild
+ #           -scheme Sample
+  #          -sdk iphonesimulator
+   #         -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.3'
+    #        -resultBundlePath TestResultsB
+     #       clean test | xcpretty
