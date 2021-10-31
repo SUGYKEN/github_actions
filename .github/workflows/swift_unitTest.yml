@@ -48,3 +48,17 @@ jobs:
             -resultBundlePath TestResultsB
             -skip-testing SampleUITests
             clean test | xcpretty
+    # Run build
+    - name: Build
+      run: xcodebuild
+            -sdk iphonesimulator
+            -configuration Debug
+            -scheme Sample
+            build
+    # Run unit test
+    - name: Run tests
+      run: xcodebuild
+            -scheme Sample
+            -sdk iphonesimulator
+            -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
+            clean test
