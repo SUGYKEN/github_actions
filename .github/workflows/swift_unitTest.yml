@@ -52,7 +52,7 @@ jobs:
     # Pre Start Simulator
     # xcrun simctl create <name> <device type id> <runtime id>
     - name: create simulator
-      run: xcrun simctl create iPhone12_ProMax com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max iOS 14.4
+      run: xcrun simctl create "iPhone12_ProMax" "com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max" "iOS 14.4"
 
     # xcrun simctl boot 
     - name: boot simulator
