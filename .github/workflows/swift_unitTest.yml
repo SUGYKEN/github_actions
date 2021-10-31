@@ -38,5 +38,5 @@ jobs:
             -scheme Sample
             -sdk iphonesimulator
             -resultBundlePath TestResultsB
-            -skip-testing SampleUITest
+            -skip-testing SampleUITests
             clean test | xcpretty
