@@ -1,0 +1,14 @@
+coverage_service: cobertura_xml
+xcodeproj: Sample.xcodeproj
+scheme: Sample
+source_directory: ./ 
+output_directory: xml_report
+ignore:
+  - Pods/*
+  - Carthage/*
+  - "**/AppDelegate.swift"
+  - "**/SceneDelegate.swift"
+  - "**/Generated/*"
+  - "**/UIParts/*"
+  - "**/Views/*"
+  - "**/Routers/*"
