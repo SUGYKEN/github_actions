@@ -37,7 +37,7 @@ jobs:
       run: set -o pipefail && xcodebuild
             -scheme Sample
             -sdk iphonesimulator
-            -destination "generic/platform=iOS Simulator"
+            -destination "platform=iOS Simulator,name=iPhone 11 Pro Max"
             -resultBundlePath TestResultsB
             -skip-testing SampleUITests
             clean test | xcpretty
