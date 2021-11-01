@@ -11,7 +11,7 @@ gem install bundler
 
 ### Gemfileを生成(リポジトリには生成済)
 ```
-gem install bundler
+bundle init
 ```
 
 ### Gemfileにライブラリを追加して、gem install
