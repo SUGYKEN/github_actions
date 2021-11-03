@@ -79,5 +79,5 @@ jobs:
       run: xcodebuild
             -scheme Sample
             -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,OS=14.4,name=iPhone 12 Pro Max'
+            -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 12 Pro Max'
             clean test
