@@ -55,8 +55,8 @@ jobs:
     #  run: xcrun simctl create "iPhone12_ProMax" "com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max" "com.apple.CoreSimulator.SimRuntime.iOS-14-4"
 
     # xcrun simctl boot 
-    - name: boot simulator
-      run: xcrun simctl boot "FD33A4A9-1950-4476-AB58-C69D8A095905"
+    #- name: boot simulator
+    #  run: xcrun simctl boot "FD33A4A9-1950-4476-AB58-C69D8A095905"
 
     # Run build
     #- name: Build
